@@ -435,7 +435,7 @@
     </config>
   </configs>
   <property name="administrative.domain.name" value="cargo-domain"></property>
-  <secure-admin special-admin-indicator="c7be1b8c-e08c-4459-a6f4-94db73dfa6ea">
+  <secure-admin special-admin-indicator="b9d4254f-4889-452a-b89e-d7c36fdff24d">
     <secure-admin-principal dn="CN=rts-MacBook-Pro.fios-router.home,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
     <secure-admin-principal dn="CN=rts-MacBook-Pro.fios-router.home-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
   </secure-admin>
@@ -444,7 +444,7 @@
     <application context-root="/cargo-tracker" object-type="user" name="cargo-tracker" location="${com.sun.aas.instanceRootURI}/applications/cargo-tracker/">
       <property name="archiveType" value="war"></property>
       <property name="appLocation" value="${com.sun.aas.instanceRootURI}/applications/__internal/cargo-tracker/cargo-tracker.war"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="98756094782603264"></property>
+      <property name="org.glassfish.ejb.container.application_unique_id" value="98773956196237312"></property>
       <property name="defaultAppName" value="cargo-tracker"></property>
       <module name="cargo-tracker">
         <engine sniffer="ejb"></engine>

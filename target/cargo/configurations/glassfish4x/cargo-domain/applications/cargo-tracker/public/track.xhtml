@@ -14,24 +14,24 @@
                         <br/>
                         <h:form id="trackingForm">
                             <p:outputLabel value="Tracking ID  " />
-                            <p:autoComplete id="trackIdInput" value="#{track.trackingId}" required="true" forceSelection="true" completeMethod="#{track.completeTracking}" />
-                            <p:commandButton value="Track!" actionListener="#{track.onTrackById}" ajax="false"/>
+                            <p:autoComplete id="trackIdInput" value="#{tracker.trackingId}" required="true" forceSelection="true" completeMethod="#{tracker.completeTracking}" />
+                            <p:commandButton value="Track!" actionListener="#{tracker.onTrackById}" ajax="false"/>
                         </h:form>
                         <br/>
-                        <h:panelGroup rendered="#{not empty track.cargo}">
+                        <h:panelGroup rendered="#{not empty tracker.cargo}">
                             <div id="result">
-                                <p>Cargo <strong>#{track.cargo.trackingId}</strong> is currently <strong>#{track.cargo.statusText}</strong></p>
-                                <p>Estimated time of arrival in <strong>#{track.cargo.destination}</strong>: #{track.cargo.eta}</p>
-                                <f:facet name="nextActivity" rendered="#{track.cargo.nextExpectedActivity}"><p>.#{track.cargo.nextExpectedActivity}.</p></f:facet>
+                                <p>Cargo <strong>#{tracker.cargo.trackingId}</strong> is currently <strong>#{tracker.cargo.statusText}</strong></p>
+                                <p>Estimated time of arrival in <strong>#{tracker.cargo.destination}</strong>: #{tracker.cargo.eta}</p>
+                                <f:facet name="nextActivity" rendered="#{tracker.cargo.nextExpectedActivity}"><p>.#{tracker.cargo.nextExpectedActivity}.</p></f:facet>
 
-                                <h:panelGroup rendered="#{track.cargo.misdirected}">
+                                <h:panelGroup rendered="#{tracker.cargo.misdirected}">
                                     <p><i class="fa fa-exclamation-triangle" style="color: #9b2332"></i> Cargo is misdirected.</p>
                                 </h:panelGroup>
 
-                                <h:panelGroup rendered="#{not empty track.cargo.events}">
+                                <h:panelGroup rendered="#{not empty tracker.cargo.events}">
                                     <strong>Handling History</strong><br/>
 
-                                    <ui:repeat value="#{track.cargo.events}" var="leg">
+                                    <ui:repeat value="#{tracker.cargo.events}" var="leg">
                                         <ui:fragment rendered="#{leg.expected}">
                                             &#160;&#160;<i class="fa fa-check" style="color: green"/>&#160;#{leg.description}<br/>
                                         </ui:fragment>
@@ -49,9 +49,9 @@
                     <div class="ui-grid-col-2" id="leftCol2"></div>
                     <div class="ui-grid-col-8" id="mainCol2">
                         <br/>
-                        <h:panelGroup rendered="#{not empty track.destinationCoordinates}">
-                            <p:gmap center="#{track.destinationCoordinates}" fitBounds="true" zoom="2" model="#{track.markersModel}" type="PLAN"  style="width:620px;height:360px;">
-                                <!-- p:ajax event="pointSelect" listener="#{track.onPointSelect}"/ --> 
+                        <h:panelGroup rendered="#{not empty tracker.destinationCoordinates}">
+                            <p:gmap center="#{tracker.destinationCoordinates}" fitBounds="true" zoom="2" model="#{tracker.markersModel}" type="PLAN"  style="width:620px;height:360px;">
+                                <!-- p:ajax event="pointSelect" listener="#{tracker.onPointSelect}"/ --> 
                             </p:gmap>
                         </h:panelGroup>
                         <p:separator />
