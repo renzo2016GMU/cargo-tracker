@@ -1,12 +1,12 @@
-/* AUTOMATICALLY GENERATED ON Wed Oct 04 22:36:15 EDT 2017*/
+/* AUTOMATICALLY GENERATED ON Fri Oct 06 11:44:42 EDT 2017*/
 /* DO NOT EDIT */
 
 grant {
   permission javax.security.jacc.EJBMethodPermission "RealtimeCargoTrackingService", "onCargoInspected,Local,net.java.cargotracker.domain.model.cargo.Cargo";
   permission javax.security.jacc.EJBMethodPermission "ExternalRoutingService", "fetchRoutesForSpecification,Local,net.java.cargotracker.domain.model.cargo.RouteSpecification";
   permission javax.security.jacc.EJBMethodPermission "UploadDirectoryScanner", "processFiles,Local,";
-  permission javax.security.jacc.EJBMethodPermission "DefaultBookingService", "bookNewCargo,Local,net.java.cargotracker.domain.model.location.UnLocode,net.java.cargotracker.domain.model.location.UnLocode,java.util.Date";
   permission javax.security.jacc.EJBMethodPermission "CargoMonitoringService", "getAllCargo,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DefaultBookingService", "bookNewCargo,Local,net.java.cargotracker.domain.model.location.UnLocode,net.java.cargotracker.domain.model.location.UnLocode,java.util.Date";
   permission javax.security.jacc.EJBMethodPermission "RealtimeCargoTrackingService", "onClose,Local,javax.websocket.Session";
   permission javax.security.jacc.EJBMethodPermission "DefaultBookingService", "requestPossibleRoutesForCargo,Local,net.java.cargotracker.domain.model.cargo.TrackingId";
   permission javax.security.jacc.EJBMethodPermission "DefaultBookingService", "changeDestination,Local,net.java.cargotracker.domain.model.cargo.TrackingId,net.java.cargotracker.domain.model.location.UnLocode";
@@ -31,8 +31,8 @@ grant      principal * * {
   permission javax.security.jacc.EJBRoleRefPermission "DefaultCargoInspectionService", "**";
   permission javax.security.jacc.EJBRoleRefPermission "DefaultHandlingEventService", "**";
   permission javax.security.jacc.EJBRoleRefPermission "MisdirectedCargoConsumer", "**";
-  permission javax.security.jacc.EJBRoleRefPermission "HandlingEventRegistrationAttemptConsumer", "**";
   permission javax.security.jacc.EJBRoleRefPermission "CargoMonitoringService", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "HandlingEventRegistrationAttemptConsumer", "**";
   permission javax.security.jacc.EJBRoleRefPermission "UploadDirectoryScanner", "**";
   permission javax.security.jacc.EJBRoleRefPermission "DeliveredCargoConsumer", "**";
 };
